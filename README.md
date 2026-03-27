@@ -10,7 +10,7 @@ Podés ver el sitio funcionando acá: [https://nicolaslicha02.github.io/Programa
 
 
 ##  Características Principales
-* **Scroll Horizontal:** Navegación fluida optimizada para mouse y teclado.
+* **Scroll Horizontal:** Navegación fluida optimizada para mouse.
 * **Diseño Responsivo:** Adaptación completa a dispositivos móviles.
 * **Efectos Visuales:** Estela de puntero optimizada por GPU y animaciones de entrada al scrollear.
 * **Arquitectura de Carpetas:** Organización profesional de activos (CSS, JS, Imágenes).
