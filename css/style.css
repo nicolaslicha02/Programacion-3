@@ -2,16 +2,33 @@
    VARIABLES GLOBALES
    ========================================= */
 :root {
+<<<<<<< HEAD
+=======
+    /* Colores base */
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
     --fondo-principal: #050505;
     --texto-principal: #e0e0e0;
     --texto-secundario: #888;
     --texto-blanco: #fff;
+<<<<<<< HEAD
     --acento-primario: #00ffcc;
     --acento-hover: #00e6b8;
     --acento-rgb: 0, 255, 204;
     --tarjeta-bg: rgba(17, 17, 17, 0.8);
     --borde-tarjeta: #222;
     --borde-tarjeta-hover: #333;
+=======
+    /* Colores de acento (Neón) */
+    --acento-primario: #00ffcc;
+    --acento-hover: #00e6b8;
+    /* Variable RGB para opacidades (brillos, sombras, fondos) */
+    --acento-rgb: 0, 255, 204;
+    /* Colores de tarjetas y bordes */
+    --tarjeta-bg: rgba(17, 17, 17, 0.8);
+    --borde-tarjeta: #222;
+    --borde-tarjeta-hover: #333;
+    /* Tipografía */
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -26,7 +43,11 @@ body, html {
     background-attachment: fixed;
     color: var(--texto-principal);
     font-family: var(--fuente-principal);
+<<<<<<< HEAD
     overflow-x: hidden; /* Evita scroll horizontal indeseado general */
+=======
+    overflow: hidden;
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
 }
 
 h1, h2, h3 {
@@ -53,7 +74,10 @@ h1, h2, h3 {
     text-align: center;
     padding: 2rem;
     max-width: 900px;
+<<<<<<< HEAD
     width: 100%;
+=======
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
 }
 
 /* =========================================
@@ -93,7 +117,11 @@ h1, h2, h3 {
     }
 
 /* =========================================
+<<<<<<< HEAD
    TARJETAS
+=======
+   TARJETAS (Perfil, Proyectos, Habilidades)
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
    ========================================= */
 .grid-perfil, .grid-proyectos {
     display: flex;
@@ -105,7 +133,11 @@ h1, h2, h3 {
 
 .grid-habilidades {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+=======
+    grid-template-columns: repeat(5, 1fr);
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
     gap: 20px;
     margin-top: 2rem;
 }
@@ -120,13 +152,20 @@ h1, h2, h3 {
 
 .perfil-card, .proyecto-card {
     padding: 1.5rem;
+<<<<<<< HEAD
     flex: 1; /* Permite que ocupen el mismo ancho */
+=======
+    width: 30%;
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
 }
 
 .habilidad-card {
     padding: 1.5rem 1rem;
     border-radius: 8px;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
 }
 
 .perfil-card p {
@@ -135,7 +174,12 @@ h1, h2, h3 {
     color: #ccc;
 }
 
+<<<<<<< HEAD
 .perfil-card:hover, .habilidad-card:hover {
+=======
+/* Efectos Hover de Tarjetas */
+.perfil-card:hover {
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(var(--acento-rgb), 0.15);
     border-color: var(--borde-tarjeta-hover);
@@ -148,6 +192,16 @@ h1, h2, h3 {
     border-color: var(--borde-tarjeta-hover);
 }
 
+<<<<<<< HEAD
+=======
+.habilidad-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--borde-tarjeta-hover);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Textos dentro de tarjetas */
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
 .tecnologias {
     font-size: 0.85rem;
     color: #ccc;
@@ -169,7 +223,11 @@ h1, h2, h3 {
 }
 
 /* =========================================
+<<<<<<< HEAD
    BOTONES Y ACCIONES
+=======
+   BOTONES
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
    ========================================= */
 .acciones {
     margin-top: 1.5rem;
@@ -287,6 +345,7 @@ h1, h2, h3 {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
     border-radius: 50%;
     pointer-events: none;
+<<<<<<< HEAD
     top: 0;
     left: 0;
     z-index: 50;
@@ -336,3 +395,9 @@ h1, h2, h3 {
         display: none;
     }
 }
+=======
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    filter: blur(8px);
+}
+>>>>>>> c116352eade56c2f4bd9d989ffc75c9f85aa681c
