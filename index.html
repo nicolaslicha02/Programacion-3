@@ -5,50 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio técnico de Nicolás Licha, Desarrollador Web Full Stack. Estudiante de la UTN FRLP enfocado en soluciones escalables y código limpio.">
     <title>Nicolás Licha - Portfolio Técnico</title>
-    
+
     <link rel="icon" href="img/logoUtn.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="css/devicon.min.css">
 </head>
 <body>
 
-    <button class="nav-btn" id="nav-izq" aria-label="Sección anterior">
+    <button class="nav-btn" id="nav-left" aria-label="Sección anterior">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6" /></svg>
     </button>
-    <button class="nav-btn" id="nav-der" aria-label="Siguiente sección">
+    <button class="nav-btn" id="nav-right" aria-label="Siguiente sección">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l6 6-6 6" /></svg>
     </button>
 
-    <div id="estela-puntero"></div>
+    <div id="pointer-trail"></div>
 
-    <main class="contenedor-horizontal">
+    <main class="horizontal-container">
 
-        <section class="panel" id="inicio">
-            <header class="contenido oculto">
-                <img src="./img/Yo.jpg" alt="Foto de Nicolás Licha" class="foto-perfil">
+        <section class="panel" id="home">
+            <header class="content hidden">
+                <img src="./img/Yo.jpg" alt="Foto de Nicolás Licha" class="profile-photo">
                 <h1>Nicolás Licha</h1>
                 <p>Desarrollador Web Full Stack</p>
-                <p class="contacto">La Plata, Buenos Aires | nicolaslicha30@gmail.com</p>
-                <div class="enlaces">
+                <p class="contact">La Plata, Buenos Aires | nicolaslicha30@gmail.com</p>
+                <div class="links">
                     <a href="https://linkedin.com/in/nicolas-licha" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
                     <a href="https://github.com/nicolaslicha02" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </header>
         </section>
 
-        <section class="panel" id="sobre-mi">
-            <div class="contenido oculto">
+        <section class="panel" id="about-me">
+            <div class="content hidden">
                 <h2>Perfil Profesional</h2>
-                <div class="grid-perfil">
-                    <article class="perfil-card">
+                <div class="profile-grid">
+                    <article class="profile-card">
                         <h3>Etapa Actual</h3>
                         <p>Cursando el segundo y último año de la Tecnicatura Universitaria en Programación. Consolidando una base técnica robusta para proyectos de la vida real.</p>
                     </article>
-                    <article class="perfil-card">
+                    <article class="profile-card">
                         <h3>Qué sé hacer</h3>
                         <p>Desarrollo soluciones Full Stack escalables y gestiono bases de datos relacionales utilizando tecnologías como Angular, React, .NET y Django.</p>
                     </article>
-                    <article class="perfil-card">
+                    <article class="profile-card">
                         <h3>Mi Enfoque</h3>
                         <p>Me esfuerzo por aprender continuamente y mejorar mi capacidad resolutiva, buscando siempre la solución más rápida, eficiente y con el código más limpio posible.</p>
                     </article>
@@ -56,79 +56,79 @@
             </div>
         </section>
 
-        <section class="panel" id="proyectos">
-            <div class="contenido">
-                <h2 class="oculto">Proyectos Destacados</h2>
-                <div class="grid-proyectos">
-                    <article class="proyecto-card oculto">
+        <section class="panel" id="projects">
+            <div class="content">
+                <h2 class="hidden">Proyectos Destacados</h2>
+                <div class="projects-grid">
+                    <article class="project-card hidden">
                         <h3>Chatbot Inteligente</h3>
-                        <p class="tecnologias">Angular | .NET | SQL Server</p>
+                        <p class="technologies">Angular | .NET | SQL Server</p>
                         <p>Automatización de atención al cliente que reduce tiempos de espera y optimiza la interacción mediante una arquitectura modular.</p>
-                        <div class="acciones">
-                            <a href="https://github.com/nicolaslicha02/SociosDev.API" target="_blank" rel="noopener noreferrer" class="btn btn-secundario">Código</a>
+                        <div class="actions">
+                            <a href="https://github.com/nicolaslicha02/SociosDev.API" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Código</a>
                         </div>
                     </article>
-                    <article class="proyecto-card oculto">
+                    <article class="project-card hidden">
                         <h3>Legal CRM</h3>
-                        <p class="tecnologias">React | TypeScript</p>
+                        <p class="technologies">React | TypeScript</p>
                         <p>Sistema integral de gestión que centraliza documentación y seguimiento de causas, mejorando la organización de estudios jurídicos mediante interfaces dinámicas.</p>
-                        <div class="acciones">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secundario">PROXIMAMENTE</a>
+                        <div class="actions">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">PROXIMAMENTE</a>
                         </div>
                     </article>
-                    <article class="proyecto-card oculto">
+                    <article class="project-card hidden">
                         <h3>NutriTra</h3>
-                        <p class="tecnologias">Django | Python</p>
+                        <p class="technologies">Django | Python</p>
                         <p>Plataforma para el monitoreo preciso de ingesta calórica, diseñada para alinear la nutrición con entrenamientos de fuerza y objetivos de recomposición corporal.</p>
-                        <div class="acciones">
-                            <a href="https://github.com/nicolaslicha02/NutriTra-Proyecto-Academico-UTN" target="_blank" rel="noopener noreferrer" class="btn btn-secundario">Código</a>
+                        <div class="actions">
+                            <a href="https://github.com/nicolaslicha02/NutriTra-Proyecto-Academico-UTN" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Código</a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="panel" id="habilidades">
-            <div class="contenido">
-                <h2 class="oculto">Habilidades Técnicas</h2>
-                <div class="grid-habilidades">
-                    <div class="habilidad-card oculto">
+        <section class="panel" id="skills">
+            <div class="content">
+                <h2 class="hidden">Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-card hidden">
                         <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
                         <p>JS / TS</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-python-plain colored" aria-hidden="true"></i>
                         <p>Python</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-csharp-plain colored" aria-hidden="true"></i>
                         <p>C#</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-microsoftsqlserver-plain colored" aria-hidden="true"></i>
                         <p>SQL</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-dotnetcore-plain colored" aria-hidden="true"></i>
                         <p>.NET</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
                         <p>Angular</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-react-original colored" aria-hidden="true"></i>
                         <p>React</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-django-plain colored" aria-hidden="true"></i>
                         <p>Django</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-github-original" aria-hidden="true"></i>
                         <p>GitHub</p>
                     </div>
-                    <div class="habilidad-card oculto">
+                    <div class="skill-card hidden">
                         <i class="devicon-html5-plain colored" aria-hidden="true"></i>
                         <p>HTML/CSS</p>
                     </div>
@@ -136,15 +136,15 @@
             </div>
         </section>
 
-        <section class="panel" id="educacion">
-            <div class="contenido oculto">
+        <section class="panel" id="education">
+            <div class="content hidden">
                 <h2>Educación e Idiomas</h2>
-                <div class="item-educacion">
-                    <img src="img/logoUtn.png" alt="Logo UTN FRLP" class="logo-utn">
+                <div class="education-item">
+                    <img src="img/logoUtn.png" alt="Logo UTN FRLP" class="utn-logo">
                     <h3>Tecnicatura Universitaria en Programación</h3>
                     <p>Universidad Tecnológica Nacional (UTN) - FRLP | En curso</p>
                 </div>
-                <div class="item-educacion">
+                <div class="education-item">
                     <h3>Inglés</h3>
                     <p>Técnico (Lectura y comprensión escrita)</p>
                 </div>

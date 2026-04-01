@@ -1,93 +1,93 @@
 document.addEventListener('DOMContentLoaded', () => {
     // =========================
-    // REFERENCIAS DOM
+    // DOM REFERENCES
     // =========================
-    const contenedor = document.querySelector('.contenedor-horizontal');
-    const contenedorScroll = contenedor?.parentElement;
-    const estela = document.getElementById('estela-puntero');
-    const btnIzq = document.getElementById('nav-izq');
-    const btnDer = document.getElementById('nav-der');
+    const container = document.querySelector('.horizontal-container');
+    const scrollContainer = container?.parentElement;
+    const trail = document.getElementById('pointer-trail');
+    const btnLeft = document.getElementById('nav-left');
+    const btnRight = document.getElementById('nav-right');
 
-    // Validación básica
-    if (!contenedor || !contenedorScroll) {
-        console.error("Contenedor no encontrado");
+    // Basic validation
+    if (!container || !scrollContainer) {
+        console.error("Container not found");
         return;
     }
 
     // =========================
-    // ESTELA DEL PUNTERO (Optimizada)
+    // POINTER TRAIL
     // =========================
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let estelaX = mouseX;
-    let estelaY = mouseY;
+    let trailX = mouseX;
+    let trailY = mouseY;
 
     const factor = 0.15;
 
-    // Solo en desktop
-    if (estela && window.innerWidth > 768) {
+    // Only on desktop
+    if (trail && window.innerWidth > 768) {
         window.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
         });
 
-        function animarEstela() {
-            estelaX += (mouseX - estelaX) * factor;
-            estelaY += (mouseY - estelaY) * factor;
+        function animateTrail() {
+            trailX += (mouseX - trailX) * factor;
+            trailY += (mouseY - trailY) * factor;
 
-            // Mejor rendimiento (GPU)
-            estela.style.transform = `translate(calc(${estelaX}px - 50%), calc(${estelaY}px - 50%))`;
+            // Better performance (GPU)
+            trail.style.transform = `translate(calc(${trailX}px - 50%), calc(${trailY}px - 50%))`;
 
-            requestAnimationFrame(animarEstela);
+            requestAnimationFrame(animateTrail);
         }
 
-        animarEstela();
+        animateTrail();
     }
 
     // =========================
-    // SCROLL HORIZONTAL
+    // HORIZONTAL SCROLL
     // =========================
-    function actualizarFlechas() {
+    function updateArrows() {
         if (window.innerWidth <= 768) return;
 
-        const margen = 5;
-        const maxScroll = contenedorScroll.scrollWidth - contenedorScroll.clientWidth;
+        const margin = 5;
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
 
-        if (btnIzq) {
-            const ocultar = contenedorScroll.scrollLeft <= 0;
-            btnIzq.style.opacity = ocultar ? '0' : '1';
-            btnIzq.style.pointerEvents = ocultar ? 'none' : 'auto';
+        if (btnLeft) {
+            const hide = scrollContainer.scrollLeft <= 0;
+            btnLeft.style.opacity = hide ? '0' : '1';
+            btnLeft.style.pointerEvents = hide ? 'none' : 'auto';
         }
 
-        if (btnDer) {
-            const ocultar = contenedorScroll.scrollLeft >= maxScroll - margen;
-            btnDer.style.opacity = ocultar ? '0' : '1';
-            btnDer.style.pointerEvents = ocultar ? 'none' : 'auto';
+        if (btnRight) {
+            const hide = scrollContainer.scrollLeft >= maxScroll - margin;
+            btnRight.style.opacity = hide ? '0' : '1';
+            btnRight.style.pointerEvents = hide ? 'none' : 'auto';
         }
     }
 
-    // Botones
-    btnIzq?.addEventListener('click', () => {
-        contenedorScroll.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    // Buttons
+    btnLeft?.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
     });
 
-    btnDer?.addEventListener('click', () => {
-        contenedorScroll.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    btnRight?.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
     });
 
-    // Scroll con rueda (solo desktop)
-    contenedorScroll.addEventListener('wheel', (e) => {
+    // Mouse wheel scroll (desktop only)
+    scrollContainer.addEventListener('wheel', (e) => {
         if (window.innerWidth > 768) {
             e.preventDefault();
-            contenedorScroll.scrollLeft += e.deltaY;
+            scrollContainer.scrollLeft += e.deltaY;
         }
     }, { passive: false });
 
-    // Eventos
-    contenedorScroll.addEventListener('scroll', actualizarFlechas);
-    window.addEventListener('resize', actualizarFlechas);
+    // Events
+    scrollContainer.addEventListener('scroll', updateArrows);
+    window.addEventListener('resize', updateArrows);
 
-    actualizarFlechas();
+    updateArrows();
 
     // =========================
     // INTERSECTION OBSERVER
@@ -97,11 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // optimización
+                    observer.unobserve(entry.target); // optimization
                 }
             });
         }, { threshold: 0.15 });
 
-        document.querySelectorAll('.oculto').forEach(el => observer.observe(el));
+        document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
     }
 });
