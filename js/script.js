@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnLeft = document.getElementById('nav-left');
     const btnRight = document.getElementById('nav-right');
 
+    // Referencia al botón "Volver al inicio"
+    // Nota: Si en el HTML le cambiaste el ID a inglés, actualizalo acá (ej: 'btn-back')
+    const btnBack = document.getElementById('btn-volver');
+
     // Basic validation
     if (!container || !scrollContainer) {
         console.error("Container not found");
@@ -64,19 +68,23 @@ document.addEventListener('DOMContentLoaded', () => {
             btnRight.style.opacity = hide ? '0' : '1';
             btnRight.style.pointerEvents = hide ? 'none' : 'auto';
         }
-        btnVolver?.addEventListener('click', (e) => {
-            e.preventDefault();
-            contenedorScroll.scrollTo({ left: 0, behavior: 'smooth' });
-        });
     }
 
-    // Buttons
+    // =========================
+    // BUTTONS & EVENTS
+    // =========================
     btnLeft?.addEventListener('click', () => {
         scrollContainer.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
     });
 
     btnRight?.addEventListener('click', () => {
         scrollContainer.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    });
+
+    // Evento del botón Volver al inicio corregido y fuera de updateArrows
+    btnBack?.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
     });
 
     // Mouse wheel scroll (desktop only)
