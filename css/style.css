@@ -82,16 +82,16 @@ h1, h2, h3 {
     color: var(--secondary-text);
 }
 
-.links a {
-    color: var(--primary-accent);
+.link-item {
+    color: var(--color-primary-accent);
     text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
 }
 
-    .links a:hover {
-        color: var(--white-text);
-        text-shadow: 0 0 8px var(--primary-accent);
+    .link-item:hover {
+        color: var(--color-white-text);
+        text-shadow: 0 0 8px var(--color-primary-accent);
     }
 
 /* =========================================
