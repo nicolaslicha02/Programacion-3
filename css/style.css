@@ -3,18 +3,18 @@
    ========================================= */
 :root {
     /* Colores base */
-    --fondo-principal: #050505;
-    --texto-principal: #e0e0e0;
-    --texto-secundario: #888;
-    --texto-blanco: #fff;
+    --color-fondo-principal: #050505;
+    --color-texto-principal: #e0e0e0;
+    --color-texto-secundario: #888;
+    --color-blanco: #fff;
     /* Colores de acento */
-    --acento-primario: #00ffcc;
-    --acento-hover: #00e6b8;
-    --acento-rgb: 0, 255, 204;
+    --color-acento-primario: #00ffcc;
+    --color-acento-hover: #00e6b8;
+    --color-acento-rgb: 0, 255, 204;
     /* Tarjetas */
-    --tarjeta-bg: rgba(17, 17, 17, 0.8);
-    --borde-tarjeta: #222;
-    --borde-tarjeta-hover: #333;
+    --color-fondo-tarjeta: rgba(17, 17, 17, 0.8);
+    --color-borde-tarjeta: #222;
+    --color-borde-tarjeta-hover: #333;
     /* Tipografía */
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -25,16 +25,16 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: var(--fondo-principal);
-    background-image: radial-gradient(at 20% 30%, rgba(var(--acento-rgb), 0.03) 0px, transparent 40%), radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.02) 0px, transparent 40%), radial-gradient(at 50% 50%, rgba(var(--acento-rgb), 0.02) 0px, transparent 60%);
+    background-color: var(--color-fondo-principal);
+    background-image: radial-gradient(at 20% 30%, rgba(var(--color-acento-rgb), 0.03) 0px, transparent 40%), radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.02) 0px, transparent 40%), radial-gradient(at 50% 50%, rgba(var(--color-acento-rgb), 0.02) 0px, transparent 60%);
     background-attachment: fixed;
-    color: var(--texto-principal);
+    color: var(--color-texto-principal);
     font-family: var(--fuente-principal);
     overflow-x: hidden;
 }
 
 h1, h2, h3 {
-    color: var(--acento-primario);
+    color: var(--color-acento-primario);
 }
 
 .contenedor-horizontal {
@@ -68,37 +68,36 @@ h1, h2, h3 {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--acento-primario);
-    box-shadow: 0 0 15px rgba(var(--acento-rgb), 0.2);
+    border: 2px solid var(--color-acento-primario);
+    box-shadow: 0 0 15px rgba(var(--color-acento-rgb), 0.2);
     margin-bottom: 1.5rem;
     transition: box-shadow 0.3s ease;
 }
 
     .foto-perfil:hover {
-        box-shadow: 0 0 30px rgba(var(--acento-rgb), 0.6);
+        box-shadow: 0 0 30px rgba(var(--color-acento-rgb), 0.6);
     }
 
 .contacto {
-    color: var(--texto-secundario);
+    color: var(--color-texto-secundario);
 }
 
 .enlaces a {
-    color: var(--acento-primario);
+    color: var(--color-acento-primario);
     text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
 }
 
     .enlaces a:hover {
-        color: var(--texto-blanco);
-        text-shadow: 0 0 8px var(--acento-primario);
+        color: var(--color-blanco);
+        text-shadow: 0 0 8px var(--color-acento-primario);
     }
 
 /* =========================================
    TARJETAS
    ========================================= */
-.grid-perfil,
-.grid-proyectos {
+.grid-perfil, .grid-proyectos {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -113,18 +112,15 @@ h1, h2, h3 {
     margin-top: 2rem;
 }
 
-.perfil-card,
-.proyecto-card,
-.habilidad-card {
-    background-color: var(--tarjeta-bg);
+.perfil-card, .proyecto-card, .habilidad-card {
+    background-color: var(--color-fondo-tarjeta);
     backdrop-filter: blur(5px);
-    border: 1px solid var(--borde-tarjeta);
+    border: 1px solid var(--color-borde-tarjeta);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
-.perfil-card,
-.proyecto-card {
+.perfil-card, .proyecto-card {
     padding: 1.5rem;
     flex: 1;
 }
@@ -135,15 +131,14 @@ h1, h2, h3 {
 }
 
     /* Hover */
-    .perfil-card:hover,
-    .habilidad-card:hover {
+    .perfil-card:hover, .habilidad-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(var(--acento-rgb), 0.15);
+        box-shadow: 0 10px 25px rgba(var(--color-acento-rgb), 0.15);
     }
 
 .proyecto-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(var(--acento-rgb), 0.15);
+    box-shadow: 0 10px 25px rgba(var(--color-acento-rgb), 0.15);
 }
 
 /* =========================================
@@ -164,17 +159,17 @@ h1, h2, h3 {
 }
 
 .btn-primario {
-    background-color: var(--acento-primario);
-    color: var(--fondo-principal);
+    background-color: var(--color-acento-primario);
+    color: var(--color-fondo-principal);
 }
 
     .btn-primario:hover {
-        background-color: var(--acento-hover);
+        background-color: var(--color-acento-hover);
     }
 
 .btn-secundario {
-    border: 1px solid var(--acento-primario);
-    color: var(--acento-primario);
+    border: 1px solid var(--color-acento-primario);
+    color: var(--color-acento-primario);
 }
 
 /* =========================================
@@ -197,7 +192,7 @@ h1, h2, h3 {
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    color: var(--texto-principal);
+    color: var(--color-texto-principal);
     border: none;
     width: 60px;
     height: 60px;
@@ -210,7 +205,7 @@ h1, h2, h3 {
 }
 
     .nav-btn:hover {
-        color: var(--acento-primario);
+        color: var(--color-acento-primario);
     }
 
 #nav-izq {
@@ -253,8 +248,7 @@ h1, h2, h3 {
         min-height: 100vh;
     }
 
-    .grid-proyectos,
-    .grid-perfil {
+    .grid-proyectos, .grid-perfil {
         flex-direction: column;
     }
 
@@ -262,6 +256,7 @@ h1, h2, h3 {
         display: none;
     }
 }
+
 /* =========================================
    ANIMACIONES DE ENTRADA
    ========================================= */
