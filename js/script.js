@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const estela = document.getElementById('estela-puntero');
     const btnIzq = document.getElementById('nav-izq');
     const btnDer = document.getElementById('nav-der');
+    const btnVolver = document.getElementById('btn-volver');
 
     // Validación básica
     if (!contenedor || !contenedorScroll) {
@@ -64,6 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
             btnDer.style.opacity = ocultar ? '0' : '1';
             btnDer.style.pointerEvents = ocultar ? 'none' : 'auto';
         }
+        btnVolver?.addEventListener('click', (e) => {
+            e.preventDefault();
+            contenedorScroll.scrollTo({ left: 0, behavior: 'smooth' });
+        });
     }
 
     // Botones
