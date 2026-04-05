@@ -18,7 +18,6 @@
     /* Tipografía */
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 /* =========================================
    ESTILOS GENERALES
    ========================================= */
@@ -26,7 +25,7 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: var(--fondo-principal);
-    background-image: radial-gradient(at 20% 30%, rgba(var(--acento-rgb), 0.03) 0px, transparent 40%), radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.02) 0px, transparent 40%), radial-gradient(at 50% 50%, rgba(var(--acento-rgb), 0.02) 0px, transparent 60%);
+    background-image: radial-gradient(at 20% 30%, rgba(var(--acento-rgb), 0.03) 0, transparent 40%), radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.02) 0, transparent 40%), radial-gradient(at 50% 50%, rgba(var(--acento-rgb), 0.02) 0, transparent 60%);
     background-attachment: fixed;
     color: var(--texto-principal);
     font-family: var(--fuente-principal);
@@ -56,26 +55,25 @@ h1, h2, h3 {
 .contenido {
     text-align: center;
     padding: 2rem;
-    max-width: 900px;
+    max-width: 56.25rem;
     width: 100%;
 }
-
 /* =========================================
    PERFIL
    ========================================= */
 .foto-perfil {
-    width: 180px;
-    height: 180px;
+    width: 11.25rem;
+    height: 11.25rem;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--acento-primario);
-    box-shadow: 0 0 15px rgba(var(--acento-rgb), 0.2);
+    border: 0.125rem solid var(--acento-primario);
+    box-shadow: 0 0 0.9375rem rgba(var(--acento-rgb), 0.2);
     margin-bottom: 1.5rem;
     transition: box-shadow 0.3s ease;
 }
 
     .foto-perfil:hover {
-        box-shadow: 0 0 30px rgba(var(--acento-rgb), 0.6);
+        box-shadow: 0 0 1.875rem rgba(var(--acento-rgb), 0.6);
     }
 
 .contacto {
@@ -86,21 +84,19 @@ h1, h2, h3 {
     color: var(--acento-primario);
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 0.625rem;
 }
 
     .enlaces a:hover {
         color: var(--texto-blanco);
-        text-shadow: 0 0 8px var(--acento-primario);
+        text-shadow: 0 0 0.5rem var(--acento-primario);
     }
-
 /* =========================================
    TARJETAS
    ========================================= */
-.grid-perfil,
-.grid-proyectos {
+.grid-perfil, .grid-proyectos {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
     text-align: left;
     margin-top: 1.5rem;
@@ -108,23 +104,20 @@ h1, h2, h3 {
 
 .grid-habilidades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    gap: 1.25rem;
     margin-top: 2rem;
 }
 
-.perfil-card,
-.proyecto-card,
-.habilidad-card {
+.perfil-card, .proyecto-card, .habilidad-card {
     background-color: var(--tarjeta-bg);
     backdrop-filter: blur(5px);
     border: 1px solid var(--borde-tarjeta);
-    border-radius: 12px;
+    border-radius: 0.75rem;
     transition: all 0.3s ease;
 }
 
-.perfil-card,
-.proyecto-card {
+.perfil-card, .proyecto-card {
     padding: 1.5rem;
     flex: 1;
 }
@@ -138,27 +131,26 @@ h1, h2, h3 {
     .perfil-card:hover,
     .habilidad-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(var(--acento-rgb), 0.15);
+        box-shadow: 0 0.625rem 1.5625rem rgba(var(--acento-rgb), 0.15);
     }
 
 .proyecto-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(var(--acento-rgb), 0.15);
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.625rem 1.5625rem rgba(var(--acento-rgb), 0.15);
 }
-
 /* =========================================
    BOTONES
    ========================================= */
 .acciones {
     margin-top: 1.5rem;
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .btn {
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     font-weight: bold;
     flex: 1;
 }
@@ -176,7 +168,6 @@ h1, h2, h3 {
     border: 1px solid var(--acento-primario);
     color: var(--acento-primario);
 }
-
 /* =========================================
    EDUCACIÓN
    ========================================= */
@@ -186,9 +177,8 @@ h1, h2, h3 {
 }
 
 .logo-utn {
-    width: 100px;
+    width: 6.25rem;
 }
-
 /* =========================================
    NAVEGACIÓN
    ========================================= */
@@ -199,8 +189,8 @@ h1, h2, h3 {
     background: transparent;
     color: var(--texto-principal);
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     cursor: pointer;
     z-index: 100;
     transition: all 0.3s ease;
@@ -214,29 +204,28 @@ h1, h2, h3 {
     }
 
 #nav-izq {
-    left: 30px;
+    left: 1.875rem;
 }
 
 #nav-der {
-    right: 30px;
+    right: 1.875rem;
 }
 
 #estela-puntero {
     position: fixed;
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 50%;
     pointer-events: none;
     background: radial-gradient( circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70% );
     transform: translate(-50%, -50%);
     z-index: 50;
-    filter: blur(8px);
+    filter: blur(0.5rem);
 }
-
 /* =========================================
    RESPONSIVE
    ========================================= */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     body, html {
         overflow-y: auto;
     }
@@ -267,7 +256,7 @@ h1, h2, h3 {
    ========================================= */
 .oculto {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(2.5rem);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
