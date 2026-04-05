@@ -3,18 +3,18 @@
    ========================================= */
 :root {
     /* Base colors */
-    --main-bg: #050505;
-    --main-text: #e0e0e0;
-    --secondary-text: #888;
-    --white-text: #fff;
+    --color-main-bg: #050505;
+    --color-main-text: #e0e0e0;
+    --color-secondary-text: #888;
+    --color-white-text: #fff;
     /* Accent colors */
-    --primary-accent: #00ffcc;
-    --accent-hover: #00e6b8;
-    --accent-rgb: 0, 255, 204;
+    --color-primary-accent: #00ffcc;
+    --color-accent-hover: #00e6b8;
+    --color-accent-rgb: 0, 255, 204;
     /* Cards */
-    --card-bg: rgba(17, 17, 17, 0.8);
-    --card-border: #222;
-    --card-border-hover: #333;
+    --color-card-bg: rgba(17, 17, 17, 0.8);
+    --color-card-border: #222;
+    --color-card-border-hover: #333;
     /* Typography */
     --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
