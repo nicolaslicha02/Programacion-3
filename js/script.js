@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
             btnRight.style.opacity = hide ? '0' : '1';
             btnRight.style.pointerEvents = hide ? 'none' : 'auto';
         }
+        btnVolver?.addEventListener('click', (e) => {
+            e.preventDefault();
+            contenedorScroll.scrollTo({ left: 0, behavior: 'smooth' });
+        });
     }
 
     // Buttons
