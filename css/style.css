@@ -17,23 +17,23 @@
     --color-card-border-hover: #333;
     /* Typography */
     --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}}
+}
 /* =========================================
    GENERAL STYLES
    ========================================= */
 body, html {
     margin: 0;
     padding: 0;
-    background-color: var(--main-bg);
-    background-image: radial-gradient(at 20% 30%, rgba(var(--accent-rgb), 0.03) 0px, transparent 40%), radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.02) 0px, transparent 40%), radial-gradient(at 50% 50%, rgba(var(--accent-rgb), 0.02) 0px, transparent 60%);
+    background-color: var(--color-main-bg);
+    background-image: radial-gradient(at 20% 30%, rgba(var(--color-accent-rgb), 0.03) 0px, transparent 40%), radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.02) 0px, transparent 40%), radial-gradient(at 50% 50%, rgba(var(--color-accent-rgb), 0.02) 0px, transparent 60%);
     background-attachment: fixed;
-    color: var(--main-text);
+    color: var(--color-main-text);
     font-family: var(--main-font);
     overflow-x: hidden;
 }
 
 h1, h2, h3 {
-    color: var(--primary-accent);
+    color: var(--color-primary-accent);
 }
 
 .horizontal-container {
@@ -106,7 +106,7 @@ h1, h2, h3 {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-    gap: 1.25rem;
+    gap: 1.35rem;
     margin-top: 2rem;
 }
 
@@ -125,9 +125,10 @@ h1, h2, h3 {
     flex: 1;
 }
 
-.skill-card {
-    padding: 1rem;
-    text-align: center;
+.skill-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
 }
     /* Hover */
     .profile-card:hover,
