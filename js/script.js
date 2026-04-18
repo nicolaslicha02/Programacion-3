@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const trail = document.getElementById('pointer-trail');
     const btnLeft = document.getElementById('nav-left');
     const btnRight = document.getElementById('nav-right');
+    const seccionHome = document.getElementById('home');
 
     // Referencia al botón "Volver al inicio"
     // Nota: Si en el HTML le cambiaste el ID a inglés, actualizalo acá (ej: 'btn-back')
@@ -117,3 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
     }
 });
+
+// =========================
+// OBSERVER: BOTON VOLVER AL INICIO
+// =========================
+const seccionHome = document.getElementById('home');
+const btnBack = document.getElementById('btn-volver');
+
+if ('IntersectionObserver' in window && seccionHome && btnBack) {
+    btnBack.classList.add('is-hidden');
+
+    const homeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                btnBack.classList.add('is-hidden');
+            } else {
+                btnBack.classList.remove('is-hidden');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    homeObserver.observe(seccionHome);
+}
